@@ -23,6 +23,7 @@ while True:
     ''')
     Begin = input ("> ")
     if Begin == 1:
+        os.system("clear")
         print ('''
     LAW OF SINES
     ––––––––––
@@ -34,7 +35,9 @@ while True:
         ''')
         Start1 = input ("> ")
         if Start1 == 1:
+            os.system("clear")
             # Enter values
+            units = raw_input ("What units are you using? > ")
             A = input ("Please Enter (A): ")
             a = input ("Please Enter (a): ")
             B = input ("Please Enter (B): ")
@@ -50,7 +53,7 @@ while True:
             # Ze operation
             equals = ((a * moreprocessedB) / moreprocessedA)
             print equals
-
+            print units
             Fin = input ('''
     1 - Return to Main Menu
     2 - Close
@@ -61,34 +64,38 @@ while True:
                 exit(0)
             pass
         elif Start1 == 2:
+            os.system("clear")
             #Not entirely sure if this all works. I think it does.
-                Atwo = input ("Please Enter (A): ")
-                atwo = input ("Please Enter (a): ")
-                btwo = input ("Please Enter (b): ")
+            units = raw_input ("What units are you using? > ")
+            Atwo = input ("Please Enter (A): ")
+            atwo = input ("Please Enter (a): ")
+            btwo = input ("Please Enter (b): ")
 
-                radianAtwo = math.radians(Atwo)
-                processedAtwo = math.sin(radianAtwo)
+            radianAtwo = math.radians(Atwo)
+            processedAtwo = math.sin(radianAtwo)
 
-                igualmente = ((btwo * processedAtwo) / atwo)
-                equalstwo = (math.asin(igualmente))
-                equalsyas = math.degrees(equalstwo)
-                print equalsyas
-                Fin = input ('''
+            igualmente = ((btwo * processedAtwo) / atwo)
+            equalstwo = (math.asin(igualmente))
+            equalsyas = math.degrees(equalstwo)
+            print equalsyas
+            print units
+            Fin = input ('''
     1 - Return to Main Menu
     2 - Close
     > ''')
-                if Fin == 1:
-                    continue
-                else:
-                    exit(0)
+            if Fin == 1:
+                continue
+            else:
+                exit(0)
         elif Start1 == 0:
+            os.system("clear")
             exit(0)
         else:
             print ("INVALID INPUT")
             time.sleep(1)
             continue
     elif Begin == 2:
-        Start2 = input ("> ")
+        os.system("clear")
         print ('''
     LAW OF COSINES
     ––––––––––
@@ -98,9 +105,11 @@ while True:
 
     |0 : Close|
         ''')
+        Start2 = input ("> ")
         if Start2 == 1:
             os.system("clear")
             # Get the values from the user
+            units = raw_input ("What units are you using? > ")
             bside = input ("Please Enter (b): ")
             cside = input ("Please Enter (c): ")
             Aangl = input ("Please Enter (A): ")
@@ -112,6 +121,7 @@ while True:
 
             finsim = ((bside * bside) + (cside + cside) - (2 * bside * cside) * Aanglcos)
             print finsim
+            print units
             Fin = input ('''
     1 - Return to Main Menu
     2 - Close
@@ -122,6 +132,7 @@ while True:
                 exit(0)
         elif Start2 == 2:
             os.system("clear")
+            units = raw_input ("What units are you using? > ")
             alength = input ("Please enter (a): ")
             blength = input ("Please enter (b): ")
             clength = input ("Please enter (c): ")
@@ -136,6 +147,7 @@ while True:
             amazingmath = (math.acos(ting / tingtwo))
             mathzz = math.degrees(amazingmath)
             print mathzz
+            print units
             Fin = input ('''
     1 - Return to Main Menu
     2 - Close
@@ -145,13 +157,14 @@ while True:
             else:
                 exit(0)
         elif Start2 == 0:
+            os.system("clear")
             exit(0)
         else:
             print ("INVALID INPUT")
             time.sleep(1)
             continue
     elif Begin == 3:
-        Start3 = input ("> ")
+        os.system("clear")
         print ('''
     COORDINATE PLANE
     ––––––––––
@@ -159,9 +172,10 @@ while True:
 
     |0 : Close|
         ''')
+        Start3 = input ("> ")
         if Start3 == 1:
             os.system("clear")
-            print ("Find distance on coordinate planes!")
+            units = raw_input ("What units are you using? > ")
             Axdist = input ("Please enter (x1): ")
             Aydist = input ("Please enter (y1): ")
             Bxdist = input ("Please enter (x2): ")
@@ -174,6 +188,7 @@ while True:
             doner = math.sqrt(done)
             print
             print doner
+            print units
             Fin = input ('''
     1 - Return to Main Menu
     2 - Close
@@ -183,12 +198,14 @@ while True:
             else:
                 exit(0)
         elif Start3 == 0:
+            os.system("clear")
             exit(0)
         else:
             print ("INVALID INPUT")
             time.sleep(1)
             continue
     elif Begin == 4:
+        os.system("clear")
         print ('''
     SURFACE AREA
     ––––––––––
@@ -196,9 +213,11 @@ while True:
 
     2 : Lateral Area/Surface Area of a Cylinder
 
-    3 : Lateral Area/Surface Area of a Pyramid (for height)
+    3 : Lateral Area/Surface Area of a Pyramid
 
-    4 : Lateral Area/Surface Area of a Pyramid (for slant height)
+    4 : **UNDER CONSTRUCTION**
+
+    5 : Lateral Area/Surface Area of a Cone
 
     |0 : Close|
         ''')
@@ -232,6 +251,7 @@ while True:
             else:
                 exit(0)
         elif Start4 == 2:
+            os.system("clear")
             units = raw_input ("What units are you using? > ")
             radius = input ("Please enter (r) > ")
             height = input ("Please enter (h) > ")
@@ -257,69 +277,97 @@ while True:
                 continue
             else:
                 exit(0)
-        elif Start4 == 3:
-            units = raw_input ("What units are you using? > ")
-            baseSideLength = input ("Please enter (b) > ")
-            height = input ("Please enter (h) > ")
+        elif Start4 ==3:
+            os.system("clear")
+            print('''
+    SA OF PYRAMID
+    ––––––––––
+    1 : For Height
 
-            halfBaseSideLength = (.5 * baseSideLength)
-            halfBaseSideLengthSquared = (halfBaseSideLength * halfBaseSideLength)
-            baseSideLengthSquared = (baseSideLength * baseSideLength)
-            heightSquared = (height * height)
+    2 : For Slant Height
+            ''')
+            Start4p5 = input ("> ")
+            if Start4p5 == 1:
+                    os.system("clear")
+                    units = raw_input ("What units are you using? > ")
+                    baseSideLength = input ("Please enter (b) > ")
+                    height = input ("Please enter (h) > ")
 
-            perimeter = (4 * baseSideLength)
-            slantHeight = (math.sqrt(halfBaseSideLengthSquared + heightSquared))
-            lateralArea = (.5 * perimeter * slantHeight)
-            surfaceArea = (lateralArea + baseSideLengthSquared)
-            print ("Lateral Area is")
-            print lateralArea
-            print units
-            print
-            print ("Surface Area is")
-            print surfaceArea
-            print units
-            Fin = input ('''
+                    halfBaseSideLength = (.5 * baseSideLength)
+                    halfBaseSideLengthSquared = (halfBaseSideLength * halfBaseSideLength)
+                    baseSideLengthSquared = (baseSideLength * baseSideLength)
+                    heightSquared = (height * height)
+
+                    perimeter = (4 * baseSideLength)
+                    slantHeight = (math.sqrt(halfBaseSideLengthSquared + heightSquared))
+                    lateralArea = (.5 * perimeter * slantHeight)
+                    surfaceArea = (lateralArea + baseSideLengthSquared)
+                    print ("Lateral Area is")
+                    print lateralArea
+                    print units
+                    print
+                    print ("Surface Area is")
+                    print surfaceArea
+                    print units
+                    Fin = input ('''
         1 - Return to Main Menu
         2 - Close
         > ''')
-            if Fin == 1:
+                    if Fin == 1:
+                        os.system("clear")
+                        continue
+                    else:
+                        exit(0)
+            elif Start4p5 == 2:
                 os.system("clear")
-                continue
-            else:
-                exit(0)
-        elif Start4 == 4:
-            units = raw_input ("What units are you using? > ")
-            baseSideLength = input ("Please enter (b) > ")
-            slantHeight = input ("Please enter (l) > ")
+                units = raw_input ("What units are you using? > ")
+                baseSideLength = input ("Please enter (b) > ")
+                slantHeight = input ("Please enter (l) > ")
 
-            baseSideLengthSquared = (baseSideLength * baseSideLength)
+                baseSideLengthSquared = (baseSideLength * baseSideLength)
 
-            perimeter = (4 * baseSideLength)
-            lateralArea = (.5 * perimeter * slantHeight)
-            surfaceArea = (lateralArea + baseSideLengthSquared)
-            print ("Lateral Area is")
-            print lateralArea
-            print units
-            print
-            print ("Surface Area is")
-            print surfaceArea
-            print units
-            Fin = input ('''
+                perimeter = (4 * baseSideLength)
+                lateralArea = (.5 * perimeter * slantHeight)
+                surfaceArea = (lateralArea + baseSideLengthSquared)
+                print ("Lateral Area is")
+                print lateralArea
+                print units
+                print
+                print ("Surface Area is")
+                print surfaceArea
+                print units
+                Fin = input ('''
         1 - Return to Main Menu
         2 - Close
         > ''')
-            if Fin == 1:
+                if Fin == 1:
+                    os.system("clear")
+                    continue
+                else:
+                    exit(0)
+            elif Start4 == 0:
                 os.system("clear")
-                continue
-            else:
                 exit(0)
+            else:
+                print ("INVALID INPUT")
+                time.sleep(1)
+                continue
         elif Start4 == 0:
+            os.system("clear")
             exit(0)
         else:
             print ("INVALID INPUT")
             time.sleep(1)
             continue
+    elif Begin == 5:
+        os.system("clear")
+        print ('''
+**UNDER CONSTRUCTION**
+        ''')
+        Start5 = input ("> ")
+
     elif Begin == 0:
+        os.system("clear")
         exit (0)
     else:
         print ("INVALID INPUT")
