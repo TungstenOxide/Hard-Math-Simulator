@@ -249,7 +249,7 @@ while True:
 
     2 : Find Angle B
 
-    |0 : Close|
+    |0 : Back|
         ''')
         Start1 = input ("> ")
         if Start1 == 1:
@@ -305,13 +305,6 @@ while True:
                 continue
             else:
                 exit(0)
-        elif Start1 == 0:
-            clear()
-            exit(0)
-        else:
-            print ("INVALID INPUT")
-            time.sleep(1)
-            continue
     elif Begin == 2:
         clear()
         print ('''
@@ -321,7 +314,7 @@ while True:
 
     2 : Find Angle C
 
-    |0 : Close|
+    |0 : Back|
         ''')
         Start = input ("> ")
         if Start == 1:
@@ -377,13 +370,6 @@ while True:
                 continue
             else:
                 exit(0)
-        elif Start == 0:
-            clear()
-            exit(0)
-        else:
-            print ("INVALID INPUT")
-            time.sleep(1)
-            continue
     elif Begin == 3:
         clear()
         print ('''
@@ -393,7 +379,7 @@ while True:
 
     2 : Find line formats from points and slope
 
-    |0 : Close|
+    |0 : Back|
         ''')
         Start = input ("> ")
         if Start == 1:
@@ -453,13 +439,7 @@ while True:
                 continue
             else:
                 exit(0)
-        elif Start == 0:
-            clear()
-            exit(0)
-        else:
-            print ("INVALID INPUT")
-            time.sleep(1)
-            continue
+
     elif Begin == 4:
         clear()
         print ('''
