@@ -2,6 +2,7 @@
 A python script for solving complex math. With formulas.
 
 Hard Math Simulator
+
 Copyleft or whatever 2014-2017
 
 Hey nerds. This is the guide that’ll show you how to use my AMAZING program.
