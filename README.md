@@ -2,7 +2,7 @@
 A python script for solving complex math. With formulas.
 
 Hard Math Simulator
-Copyright 2014-2017 Will Nilges (It’s open source though, so screw with it all you like, just give me credit.)
+Copyleft or whatever 2014-2017
 
 Hey nerds. This is the guide that’ll show you how to use my AMAZING program.
 
