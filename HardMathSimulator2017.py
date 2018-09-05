@@ -104,7 +104,7 @@ def trinomialFactoring():
 
 
 def quadraticFormula():
-    try:#stealing this code. Copyright © Will Nilges 2014-2017
+    try:
         if (math.sqrt((b*b)-4*a*c)).is_integer():
             print ("Plus")
             print ("Square Root: " + format(math.sqrt((b*b)-4*a*c)))
@@ -693,7 +693,7 @@ while True:
             yPoint = input("("+ x + ", _)")
             point = "("+ x + ", " + y + ")"
         elif Start == 4:
-            #You fuckers better be grateful for this shit because it's hard as fuck. I'm smarter than Bill Fucking Gates.
+            #haha this is so hard.
             print ("REMEMBER! ENTER POINTS IN DECENDING Y VALUE!")
             print ("Enter Point One")
             xOn = input("(_, y) > ")
@@ -795,7 +795,6 @@ while True:
             print (format(yOne) + "=" + format((eaXSquared*a)+(xOne*b)) + "+ c")
             print ("c = " + format(yOne) + "/" + format((eaXSquared*a)+(xOne*b)))
             print ("c = " + format(c))
-            #Christ on a chimney. You loosers better worship me.
             print ("")
 
             print ("a, b, c values")
