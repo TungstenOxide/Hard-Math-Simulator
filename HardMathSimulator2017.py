@@ -21,25 +21,21 @@ def trinomialFactoring():
             multdiv = (-1*Bin) + Cin
         if Bin > 0 and Cin > 0:
             multdiv = Bin + Cin
-        originMultDiv = multdiv#Fun fact, multdiv was a typo and I just kinda rolled with it out of laziness.
+        originMultDiv = multdiv
         if multdiv > 0:
-             Anchor = multdiv#Anchor
+             Anchor = multdiv
         if multdiv < 0:
             Anchor = -1*multdiv
         multdivTwo = multdiv
         while (multdiv <= Anchor):
-            #==========
             while (multdivTwo <= Anchor):
                 if multdiv + multdivTwo == Bin and multdiv * multdivTwo == Cin:
                     break
                 multdivTwo += 1;
-            #</multdivTwo_count>
-            #==========
             if multdiv + multdivTwo == Bin and multdiv * multdivTwo == Cin:
                 break
             multdiv += 1;
             multdivTwo = originMultDiv
-            #</multdiv_count>
         #Print Result
         if (multdiv + multdivTwo == Bin) and (multdiv * multdivTwo == Cin):
             if multdiv < 0 and multdivTwo < 0:
@@ -52,7 +48,6 @@ def trinomialFactoring():
                 print ("(" + variable + " + " + format(multdiv) + ")(" + variable + " + " + format(multdivTwo) + ")")
         else:
             print ("It's probably prime lol")
-        #</factoring>
     else:
         #=======SPLIT THE MIDDLE=======
         #Decide what the things should start as
@@ -66,9 +61,9 @@ def trinomialFactoring():
             multdiv = (-1*Bin) + xFin
         if Bin > 0 and xFin > 0:
             multdiv = Bin + xFin
-        originMultDiv = multdiv#Fun fact, multdiv was a typo and I just kinda rolled with it out of laziness.
+        originMultDiv = multdiv
         if multdiv > 0:
-             Anchor = multdiv#Anchor
+             Anchor = multdiv
         if multdiv < 0:
             Anchor = -1*multdiv
         multdivTwo = multdiv
@@ -78,13 +73,11 @@ def trinomialFactoring():
                 if multdiv + multdivTwo == Bin and multdiv * multdivTwo == xFin:
                     break
                 multdivTwo += 1;
-            #</multdivTwo_count>
             #==========
             if multdiv + multdivTwo == Bin and multdiv * multdivTwo == xFin:
                 break
             multdiv += 1;
             multdivTwo = originMultDiv
-            #</multdiv_count>
         #Print Result
         print ("(" + format(Ain) + variable + "^2 + " + format(multdiv) + variable + ") | (" + format(multdivTwo) + variable + " + " + format(Cin) + ")")#This is about halfway through splitting the middle.
         xAI = Ain
@@ -280,10 +273,9 @@ while True:
                 continue
             else:
                 exit(0)
-            pass
         elif Start1 == 2:
             clear()
-            #Not entirely sure if this all works. I think it does.
+            #Not entirely sure if this all works.
             units = raw_input ("What units are you using? > ")
             Atwo = input ("Please Enter (A): ")
             atwo = input ("Please Enter (a): ")
@@ -395,9 +387,7 @@ while True:
 
             done = (xdistdone + ydistdone)
             doner = math.sqrt(done)
-            print ()
-            print (doner)
-            print (units)
+            print ("\n" + str(doner) + "\n" + str(units))
             fin = input ('''
     1 - Return to Main Menu
     2 - Close
@@ -413,7 +403,7 @@ while True:
             slopeRun = input ("Please enter the run of the slope (" + format(slopeRise) + ",__): ")
             stringSlope = (format(slopeRise) + "/" + format(slopeRun))
             numericalSlope = float(slopeRise)/float(slopeRun)
-            # Ugh CALCULATIONS
+            # CALCULATIONS
             print (numericalSlope)
             if x > 0:
                 pointSlope = "y - " + format(y) + " = " + format(stringSlope) + "(x - " + format(x) + ")"
@@ -849,10 +839,8 @@ while True:
                 b = -b
                 if a != 0:
                     out = gcd(a,b)
-                    afuckyou = a/gcd(a,b)
-                    bfuckyou = b/gcd(a,b)
-                    a = afuckyou
-                    b = bfuckyou
+                    a = a/gcd(a,b)
+                    b = b/gcd(a,b)
                     print (format(out) + "(x + " + format(math.sqrt(b)) + ")(x - " + format(math.sqrt(b)) + ")")
                 else:
                     print ("(x + " + format(math.sqrt(b)) + ")(x - " + format(math.sqrt(b)) + ")")
@@ -910,7 +898,6 @@ while True:
             clear()
             dPwr = input(format(a) + variable + "^" + format(aPwr) + " + " + format(b) + variable + "^" + format(bPwr) + " + " + format(c) + variable + "^" + format(cPwr) + " + " + format(d) + variable + "^___ > ")
             clear()
-            # A E S T H E T I C
 
             takeOut = gcd(a,b)
             new_a = a/gcd(a,b)
@@ -956,7 +943,7 @@ goes to
             #     print ("(" + format(new_a) + variable + "^" + format(new_aPwr) + " + " + format(new_b) + variable + "^" + format(new_bPwr) +  ")(" + format(takeOut) + variable + "^" + format(takeOutPwr) + " + " + format(takeOutTwo) + variable + "^" + format(takeOutPwrTwo) +  ")")
             if (takeOutPwr > 2 or takeOutPwrTwo > 2 or new_aPwr > 2 or new_bPwr > 2 or new_cPwr > 2 or new_dPwr > 2):
                 print ("Watch out, this might still be factorable! A sum of squares can be factored, but a difference of squares cannot.")
-            #It's a good start. It'll do for now. To Do: Write a loop that keeps on factoring.
+            #It's a good start. It'll do for now. TODO: Write a loop that keeps on factoring.
                 #print ("BUT WAIT, THERE'S MORE!")
             # if math.sqrt(new_aPwr).is_integer > 1 and math.sqrt(new_bPwr).is_integer > 1  and math.sqrt(new_a).is_integer and math.sqrt(-new_b).is_integer and new_b < 0:
             #     print ("(" + format(math.sqrt(new_a)) + variable + "^" + format(math.sqrt(new_aPwr))) + " + " + format(math.sqrt(new_b)) + variable + "^" + format(math.sqrt(new_bPwr))) + ")(" + format(math.sqrt(new_a)) + variable + "^" + format(math.sqrt(new_aPwr))) + " - " + format(math.sqrt(new_b)) + variable + "^" + format(math.sqrt(new_bPwr))) + ")"
